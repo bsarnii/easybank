@@ -1,0 +1,110 @@
+header{
+    background-color: var(--white);
+    position: relative;
+    justify-content: space-between;
+    z-index: 10;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.button-wrapper{
+    display: none;
+}
+.hamburger-container{
+    cursor: pointer;
+}
+nav{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -400%;
+    left: 2rem;
+    right: 2rem;
+    transition: 0.1s;
+    text-align: center;
+    z-index: 5;
+
+}
+nav[data-open="true"]{
+    background-color: var(--white);
+    border-radius: 5px;
+    top: calc(100% + 2rem);
+}
+a{
+    color: var(--darkBlue);
+    text-decoration: none;
+    display: block;
+    padding: .5rem 0;
+}
+a:focus{
+    background-color: rgba(0, 0, 0, .05);
+}
+.dark-on-nav-open{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .2);
+}
+@media screen and (min-width:575px) {
+    header{
+        justify-content: space-evenly;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .logo-container{
+        display: flex;
+        align-items: center;
+    }
+    .hamburger-container{
+        display: none;
+    }
+    .button-wrapper{
+        margin: auto 0;
+        display: block;
+    }
+    button{
+        background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+        border: none;
+        font-size: 17px;
+        border-radius: 25px;
+        white-space: nowrap;
+        color: var(--white);
+        padding: .5rem 1rem;
+        transition: .3s;
+    }
+    button:hover{
+        opacity: .7;
+        color: var(--white);
+    }
+    nav{
+        position: static;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        transform: none;
+        width: auto;
+    }
+    nav > div {
+        padding-bottom: 4px;
+    }
+    nav > div:hover {
+        background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    }
+    a{
+        color: var(--grayBlue);
+        background-color: var(--white);
+        border-bottom: 3px solid transparent;
+        padding: 1rem 0;
+    }
+    a:hover{
+        color: var(--darkBlue);
+        border-bottom: 3px solid linear-gradient(right, red, yellow);
+    }
+    a:focus{
+        background-color: initial;
+    }
+    .dark-on-nav-open{
+        display: none;
+    }
+}
