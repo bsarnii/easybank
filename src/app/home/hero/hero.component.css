@@ -1,5 +1,40 @@
-div{
-    height: 500px;
+.background-container{
+    background-image: url("src/assets/images/bg-intro-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+img{
+    height: auto;
     width: 100%;
-    background-color: red;
+    transform: translateY(-29%);
+}
+main{
+    text-align: center;
+}
+h1{
+    font-size: 40px;
+    color: var(--darkBlue);
+}
+p{
+    color: var(--grayBlue);
+}
+button{
+    background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    border: none;
+    font-size: 17px;
+    border-radius: 25px;
+    white-space: nowrap;
+    color: var(--white);
+    padding: .5rem 1rem;
+    transition: opacity .3s;
+}
+button:hover{
+    opacity: .7;
+    color: var(--white);
+}
+button:active{
+    color: var(--white);
+}
+.btn:first-child:active{
+    color: var(--white);
 }

@@ -1,16 +1,16 @@
 <header class="container-fluid px-4 d-flex">
     <div class="logo-container">
-        <img class="logo" src="assets/images/logo.svg" alt="easybank logo">
+        <a href="#"><img class="logo" src="assets/images/logo.svg" alt="easybank logo"></a>
     </div>
     <div (click)="isOpen()" class="hamburger-container">
         <img class="hamburger" [src]="hamburgerOrClose" alt="hamburger">
     </div>
     <nav [attr.data-open]="open" (click)="isOpen()">
-        <div class="home-wrapper"><a href="#">Home</a></div>
-        <div class="about-wrapper"><a href="#">About</a></div>
-        <div class="contact-wrapper"><a href="#">Contact</a></div>
-        <div class="blog-wrapper"><a href="#">Blog</a></div>
-        <div class="careers-wrapper"><a href="#">Careers</a></div>
+        <a class="link" href="#">Home</a>
+        <a class="link" href="#">About</a>
+        <a class="link" href="#">Contact</a>
+        <a class="link" href="#">Blog</a>
+        <a class="link" href="#">Careers</a>
     </nav>
     <div class="button-wrapper">
         <button class="btn">Request Invite</button>
