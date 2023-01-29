@@ -21,3 +21,6 @@ button{
 button, a, p, li, ul {
     font-size: 18px;
 }
+img, svg{
+    vertical-align: middle;
+}

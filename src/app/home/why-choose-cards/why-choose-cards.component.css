@@ -1,0 +1,54 @@
+:host{
+    display: block;
+    background-color: var(--veryLightGray);
+    padding: 5rem 2rem 5rem 2rem;
+    text-align: center;
+}
+h1{
+    font-size: 36px;
+    color: var(--darkBlue);
+}
+p{
+    padding: 1rem 0;
+    color: var(--grayBlue);
+}
+.card{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img{
+    width: 80px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+h2{
+    color: var(--darkBlue);
+}
+
+
+@media screen and (min-width:575px) {
+    :host{
+        padding: 5rem 5rem;
+        text-align: start;
+    }
+    .width-55{
+        width: 55%;
+    }
+    .cards-container{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .card{
+        align-items: flex-start;
+        min-width: 200px;
+        max-width: 300px;
+    }
+    h2{
+        font-size: 24px;
+    }
+}

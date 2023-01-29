@@ -1,3 +1,10 @@
+:host{
+    display: block;
+    margin-bottom: 5rem;
+}
+main{
+    text-align: center;
+}
 .background-container{
     background-image: url("src/assets/images/bg-intro-mobile.svg");
     background-repeat: no-repeat;
@@ -6,10 +13,6 @@
 img{
     height: auto;
     width: 100%;
-    transform: translateY(-29%);
-}
-main{
-    text-align: center;
 }
 h1{
     font-size: 40px;
@@ -32,9 +35,38 @@ button:hover{
     opacity: .7;
     color: var(--white);
 }
-button:active{
-    color: var(--white);
-}
-.btn:first-child:active{
-    color: var(--white);
+
+@media screen and (min-width:575px) {
+    :host{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 5rem;
+        margin-bottom: 0;
+    }
+    .background-container{
+        max-height: 80vh;
+        width: 55%;
+        max-width: 830px;
+        background-image: url("src/assets/images/bg-intro-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom left;
+        overflow: hidden;
+    }
+    main{
+        width: 45%;
+        text-align: start;
+    }
+    img{
+        transform: translateX(20%);
+        width: auto;
+        object-position: left;
+        max-height: 80vh;
+        min-height: 500px;
+    }
+    h1{
+        font-size: 50px;
+    }
 }

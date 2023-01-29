@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { HomeHomeComponent } from './home-home/home-home.component';
 import { HeroComponent } from './hero/hero.component';
+import { WhyChooseCardsComponent } from './why-choose-cards/why-choose-cards.component';
 
 
 
 @NgModule({
-  declarations: [HomeHomeComponent, HeroComponent],
+  declarations: [HomeHomeComponent, HeroComponent, WhyChooseCardsComponent],
   imports: [
     CommonModule
   ],

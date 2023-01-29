@@ -2,9 +2,9 @@
     <div class="logo-container">
         <a href="#"><img class="logo" src="assets/images/logo.svg" alt="easybank logo"></a>
     </div>
-    <div (click)="isOpen()" class="hamburger-container">
+    <button (click)="isOpen()" class="hamburger-container">
         <img class="hamburger" [src]="hamburgerOrClose" alt="hamburger">
-    </div>
+    </button>
     <nav [attr.data-open]="open" (click)="isOpen()">
         <a class="link" href="#">Home</a>
         <a class="link" href="#">About</a>
@@ -13,7 +13,7 @@
         <a class="link" href="#">Careers</a>
     </nav>
     <div class="button-wrapper">
-        <button class="btn">Request Invite</button>
+        <button>Request Invite</button>
     </div>
 </header>
 <div *ngIf="open" (click)="isOpen()" class="dark-on-nav-open"></div>

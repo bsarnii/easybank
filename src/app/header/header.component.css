@@ -1,6 +1,6 @@
 header{
     background-color: var(--white);
-    position: relative;
+    position: fixed;
     justify-content: space-between;
     z-index: 10;
     padding-top: 1rem;
@@ -11,7 +11,8 @@ header{
     display: none;
 }
 .hamburger-container{
-    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 nav{
     position: absolute;
@@ -42,12 +43,13 @@ nav[data-open="true"]{
     background-color: rgba(0, 0, 0, .05);
 }
 .dark-on-nav-open{
-    position: absolute;
+    position: fixed;
     top:0;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 5;
 }
 @media screen and (min-width:575px) {
     header{
@@ -79,12 +81,6 @@ nav[data-open="true"]{
     button:hover{
         opacity: .7;
         color: var(--white);
-    }
-    button:active{
-        color: var(--white)
-    }
-    .btn:first-child:active{
-        color: var(--white)
     }
     nav{
         position: static;
