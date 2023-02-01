@@ -1,0 +1,11 @@
+<h1>Latest Atricles</h1>
+<div class="articles">
+    <article *ngFor="let item of articles">
+        <img [src]="item.img" alt="item">
+        <a class="content" href="#">
+            <small>By {{item.author}}</small>
+            <h2>{{item.heading}}</h2>
+            <p>{{item.paragraph}}</p>
+        </a>
+    </article>
+</div>

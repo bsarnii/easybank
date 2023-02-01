@@ -1,15 +1,16 @@
 :host{
     display: block;
-    background-color: var(--veryLightGray);
-    padding: 5rem 2rem 5rem 2rem;
+    background-color: var(--lightGrayBlue);
+    padding: 5rem 1.5rem 5rem 1.5rem;
     text-align: center;
 }
 h1{
-    font-size: 36px;
+    font-size: 32px;
     color: var(--darkBlue);
 }
 p{
     padding: 1rem 0;
+    font-size: 15px;
     color: var(--grayBlue);
 }
 .card{
@@ -20,12 +21,13 @@ p{
     align-items: center;
 }
 img{
-    width: 80px;
+    width: 70px;
     height: auto;
     margin-bottom: 1rem;
 }
 h2{
     color: var(--darkBlue);
+    font-size: 20px;
 }
 
 
@@ -34,12 +36,18 @@ h2{
         padding: 5rem 5rem;
         text-align: start;
     }
+    h1{
+        font-size: 36px;
+    }
+    p{
+        font-size: 18px;
+    }
     .width-55{
         width: 55%;
     }
     .cards-container{
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 1rem;
         flex-wrap: wrap;
     }

@@ -1,0 +1,36 @@
+:host{
+    background-color: var(--darkBlue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+.logo-with-icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+    margin: 2rem 0;
+}
+a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+}
+.button-with-rights{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+p{
+    font-size: 15px;
+    color: var(--grayBlue);
+}

@@ -1,9 +1,11 @@
 :host{
     display: block;
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--veryLightGray);
 }
 main{
     text-align: center;
+    padding: 1.5rem;
 }
 .background-container{
     background-image: url("src/assets/images/bg-intro-mobile.svg");
@@ -20,30 +22,16 @@ h1{
 }
 p{
     color: var(--grayBlue);
+    font-size: 15px;
 }
-button{
-    background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
-    border: none;
-    font-size: 17px;
-    border-radius: 25px;
-    white-space: nowrap;
-    color: var(--white);
-    padding: .5rem 1rem;
-    transition: opacity .3s;
-}
-button:hover{
-    opacity: .7;
-    color: var(--white);
-}
-
 @media screen and (min-width:575px) {
     :host{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         gap: 1rem;
-        margin-left: 5rem;
-        margin-bottom: 0;
+        padding-left: 5rem;
+        padding-bottom: 0;
     }
     .background-container{
         max-height: 80vh;
@@ -58,6 +46,8 @@ button:hover{
     main{
         width: 45%;
         text-align: start;
+        padding: 0;
+
     }
     img{
         transform: translateX(20%);
@@ -68,5 +58,8 @@ button:hover{
     }
     h1{
         font-size: 50px;
+    }
+    p{
+        font-size: 18px;
     }
 }

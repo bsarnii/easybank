@@ -68,20 +68,6 @@ nav[data-open="true"]{
         margin: auto 0;
         display: block;
     }
-    button{
-        background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
-        border: none;
-        font-size: 17px;
-        border-radius: 25px;
-        white-space: nowrap;
-        color: var(--white);
-        padding: .5rem 1rem;
-        transition: opacity .3s;
-    }
-    button:hover{
-        opacity: .7;
-        color: var(--white);
-    }
     nav{
         position: static;
         flex-direction: row;
