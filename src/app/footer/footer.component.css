@@ -1,4 +1,4 @@
-:host{
+footer{
     background-color: var(--darkBlue);
     color: var(--white);
     display: flex;
@@ -15,14 +15,23 @@
 nav{
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: .75rem;
     margin: 2rem 0;
+}
+.first-col, .second-col{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: center;
 }
 a{
     color: var(--white);
     text-decoration: none;
     font-size: 15px;
+    transition: color .3s;
+}
+a:hover{
+    color: var(--limeGreen);
 }
 .button-with-rights{
     display: flex;
@@ -32,5 +41,26 @@ a{
 }
 p{
     font-size: 15px;
+    margin: 0;
     color: var(--grayBlue);
+}
+@media screen and (min-width: 575px){
+    footer{
+        flex-direction: row;
+        padding: 3rem 5rem;
+        justify-content: space-evenly;
+    }
+    .logo-with-icons{
+        gap: 2.5rem;
+    }
+    nav{
+        flex-direction: row;
+        gap:calc(100vw - 93vw);
+    }
+    .first-col, .second-col{
+        align-items: flex-start;
+    }
+    .button-with-rights{
+        align-items: flex-end;
+    }
 }

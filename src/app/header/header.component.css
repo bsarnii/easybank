@@ -6,6 +6,7 @@ header{
     padding-top: 1rem;
     padding-bottom: 1rem;
     transform-style: preserve-3d; /*sets child element behind parent (nav) */
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.2);
 }
 .button-wrapper{
     display: none;
@@ -17,6 +18,7 @@ header{
 nav{
     position: absolute;
     background-color: var(--white);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     top: -400%;
@@ -30,7 +32,6 @@ nav{
 }
 nav[data-open="true"]{
     background-color: var(--white);
-    border-radius: 5px;
     top: calc(100% + 2rem);
 }
 .link{
@@ -38,6 +39,12 @@ nav[data-open="true"]{
     text-decoration: none;
     display: block;
     padding: .5rem 0;
+}
+.link:first-child{
+    padding-top: 1rem;
+}
+.link:last-child{
+    padding-bottom: 1rem;
 }
 .link:focus{
     background-color: rgba(0, 0, 0, .05);
@@ -48,7 +55,7 @@ nav[data-open="true"]{
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .4);
+    background-image: linear-gradient(to bottom, var(--darkBlue), rgba(255,255,255,0));
     z-index: 5;
 }
 @media screen and (min-width:575px) {
