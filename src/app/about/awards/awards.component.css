@@ -1,0 +1,36 @@
+:host{
+    display: block;
+    background-color: var(--veryLightGray);
+    padding: 1.5rem 1rem;
+}
+h2{
+    font-size: 32px;
+    margin: 2rem auto;
+    text-align: center;
+    color: var(--darkBlue);
+}
+.awards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.award{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3{
+    font-size: 20px;
+    margin: 1rem 0;
+    color: var(--darkBlue);
+}
+
+@media screen and (min-width: 575px) {
+    .awards{
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: space-evenly;
+
+    }
+}

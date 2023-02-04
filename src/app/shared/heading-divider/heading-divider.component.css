@@ -1,0 +1,18 @@
+section{
+    position: relative;
+}
+section::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    height: 3px;
+    background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    width: 100%;
+}
+h1{
+    font-size: 32px;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 0;
+    color: var(--darkBlue);
+}

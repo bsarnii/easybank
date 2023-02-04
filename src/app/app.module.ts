@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
+import { AboutModule } from './about/about.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +12,8 @@ import { YoutubeIconComponent } from './footer/youtube-icon/youtube-icon.compone
 import { TwitterIconComponent } from './footer/twitter-icon/twitter-icon.component';
 import { PinterestIconComponent } from './footer/pinterest-icon/pinterest-icon.component';
 import { InstagramIconComponent } from './footer/instagram-icon/instagram-icon.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 
@@ -27,9 +30,10 @@ import { InstagramIconComponent } from './footer/instagram-icon/instagram-icon.c
   ],
   imports: [
     BrowserModule,
+    AboutModule,
     HomeModule,
-    SharedModule
-
+    SharedModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

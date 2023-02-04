@@ -15,6 +15,7 @@ main{
 img{
     height: auto;
     width: 100%;
+    transform: translate(0, -10%);
 }
 h1{
     font-size: 40px;
@@ -50,7 +51,7 @@ p{
 
     }
     img{
-        transform: translateX(20%);
+        transform: translate(20%, -10%);
         width: auto;
         object-position: left;
         max-height: 80vh;

@@ -1,6 +1,7 @@
 header{
     background-color: var(--white);
-    position: fixed;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     z-index: 10;
     padding-top: 1rem;
