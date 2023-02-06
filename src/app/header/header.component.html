@@ -6,9 +6,9 @@
         <img class="hamburger" [src]="hamburgerOrClose" alt="hamburger">
     </button>
     <nav [attr.data-open]="open" (click)="isOpen()" aria-label="primary">
-        <a class="link" routerLink="/">Home</a>
-        <a class="link" routerLink="/about">About</a>
-        <a class="link" href="#">Contact</a>
+        <a class="link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        <a class="link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About</a>
+        <a class="link" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Contact</a>
         <a class="link" href="#">Blog</a>
         <a class="link" href="#">Careers</a>
     </nav>

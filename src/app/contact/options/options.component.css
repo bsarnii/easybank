@@ -1,0 +1,32 @@
+section{
+    padding: 1.5rem;
+}
+h2{
+    font-size: 30px;
+    margin: 1.5rem 0;
+    text-align: center;
+    color: var(--darkBlue);
+}
+.contact-options{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+a > img{
+    height: 50px;
+    transition: all .3s;
+}
+a {
+    text-decoration: none;
+    color: var(--grayBlue);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: color .3s;
+}
+a:hover{
+    color: var(--darkBlue);
+}
+a:hover > img{
+    transform: scale(1.1);
+}
