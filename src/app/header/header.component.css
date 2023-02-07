@@ -67,6 +67,7 @@ nav[data-open="true"]{
         justify-content: space-evenly;
         padding-top: 0;
         padding-bottom: 0;
+        overflow: hidden;
     }
     .logo-container{
         display: flex;

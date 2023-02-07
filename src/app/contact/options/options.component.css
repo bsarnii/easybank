@@ -2,9 +2,8 @@ section{
     padding: 1.5rem;
 }
 h2{
-    font-size: 30px;
+    font-size: 32px;
     margin: 1.5rem 0;
-    text-align: center;
     color: var(--darkBlue);
 }
 .contact-options{
@@ -29,4 +28,14 @@ a:hover{
 }
 a:hover > img{
     transform: scale(1.1);
+}
+
+@media screen and (min-width: 575px) {
+    a {
+        gap: 5%;
+    }
+    :host{
+        width: 50%;
+        max-width: 600px;
+    }   
 }

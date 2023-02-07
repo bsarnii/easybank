@@ -1,0 +1,89 @@
+/*FORM VALIDATION*/
+.invalid{
+    color: rgb(236, 45, 45);
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(236, 45, 45);
+}
+textarea.ng-invalid.ng-touched{
+    border: 1px solid rgb(236, 45, 45);
+}
+
+/*FORM VALIDATION END*/
+form{
+    background-color: var(--veryLightGray);
+    padding: 1.5rem;
+    margin: 1.5rem;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+label{
+    color: var(--grayBlue);
+}
+input {
+    border: 1px solid var(--grayBlue);
+    border-radius: 10px;
+    outline-color: hsla(136, 65%, 51%, 0.5);
+    color: var(--darkBlue);
+    padding: .5rem 1rem;
+    width: 100%;
+}
+textarea{
+    width: 100%;
+    border-radius: 10px;
+    height: 7.5rem;
+    outline-color: hsla(136, 65%, 51%, 0.5);
+    color: var(--darkBlue);
+    padding: .5rem 1rem;
+    border: 1px solid var(--grayBlue);
+    resize: none;
+}
+.firstname-container, .lastname-container, .email-container, .message-container, button{
+    padding: 1rem 0;
+}
+button{
+    position: relative;
+    background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    border: none;
+    font-size: 14px;
+    border-radius: 25px;
+    white-space: nowrap;
+    color: var(--white);
+    padding: .65rem 2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+button::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    right:0;
+    top: 0;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    transition: background-color .3s;
+}
+button:hover::after{
+    background-color: rgba(255, 255, 255, .3);
+
+}
+
+@media screen and (min-width: 575px) {
+    :host{
+        width: 50%;
+        max-width: 600px;
+    }
+    .names{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    .firstname-container{
+        width: 50%;
+    }
+    .lastname-container{
+        width: 50%;
+    }
+}

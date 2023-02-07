@@ -1,0 +1,41 @@
+<form *ngIf="!validSubmit" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="names">
+        <div class="firstname-container">
+            <label for="firstname">First Name</label>
+            <br>
+            <input formControlName="firstname" id="firstname" type="text" required>
+        </div>
+        <div class="lastname-container">
+            <label for="lastname">Last Name</label>
+            <br>
+            <input formControlName="lastname" id="lastname" type="text" required>
+        </div>
+    </div>
+
+    <div class="invalid" *ngIf="firstname.invalid && firstname.touched">
+        Invalid first name input
+    </div>
+    <div class="invalid" *ngIf="lastname.invalid && lastname.touched">
+        Invalid last name input
+    </div>
+
+    <div class="email-container">
+        <label for="email">E-mail</label>
+        <br>
+        <input formControlName="email" id="email"  type="email">
+    </div>
+    <div class="invalid" *ngIf="email.invalid && email.touched">
+        Invalid e-mail
+    </div>
+    <div class="message-container">
+        <label for="message">Message</label>
+        <br>
+        <textarea formControlName="message" id="message"></textarea>
+    </div>
+    <div class="invalid" *ngIf="message.invalid && message.touched">
+        Message should be at least 10 characters.
+    </div>
+    <p *ngIf="invalidSubmit" class="invalid">ERROR, please fill out all the fields with correct information!</p>
+    <button>Send Message</button>
+</form>
+<h1 *ngIf="validSubmit" style="text-align: center; margin:3rem 3rem 30rem 3rem">Your message has been delivered!</h1>
