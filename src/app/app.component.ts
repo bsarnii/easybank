@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { showInviteSelector } from './invite/store/selectors';
+import { AppStateInterface } from './types/appstate.interface';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'easybank';
+  invite$: Observable<boolean>
+
+  constructor(private store: Store<AppStateInterface>) {
+    this.invite$ = this.store.pipe(select(showInviteSelector))
+  }
 }

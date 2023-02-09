@@ -1,6 +1,6 @@
-<div class="invite">
-    <form class="inner-container">
-        <img src="assets/images/icon-close.svg" alt="close"/>
+<div class="invite" (click)="hideInvite()">
+    <form (click)="$event.stopPropagation()" class="inner-container">
+        <img (click)="hideInvite()" src="assets/images/icon-close.svg" alt="close"/>
         <div class="email-container">
             <label for="email">Enter your e-mail address:</label>
             <input type="email" id="email">

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as HomeActions from '../home/store/actions';
+import * as InviteActions from 'src/app/invite/store/actions';
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +10,6 @@ import * as HomeActions from '../home/store/actions';
 export class FooterComponent {
   constructor (private store:Store) {}
   invite(){
-    this.store.dispatch(HomeActions.showInvite());
+    this.store.dispatch(InviteActions.showInvite());
   }
 }

@@ -9,8 +9,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { WhyChooseCardsComponent } from './components/why-choose-cards/why-choose-cards.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 
-import { StoreModule } from '@ngrx/store';
-import { reducers } from './store/reducers';
+
 
 
 
@@ -18,7 +17,6 @@ import { reducers } from './store/reducers';
   declarations: [HomeHomeComponent, HeroComponent, WhyChooseCardsComponent, ArticlesComponent],
   imports: [
     CommonModule,
-    StoreModule.forFeature('home',reducers),
     SharedModule,
     HomeRoutingModule
   ],

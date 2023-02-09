@@ -1,5 +1,5 @@
-import { HomeStateInterface } from "../home/types/home-state-interface";
+import { InviteStateInterface } from "../invite/types/invite-state.interface";
 
 export interface AppStateInterface {
-    home: HomeStateInterface
+    invite: InviteStateInterface
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as HomeActions from '../home/store/actions';
+import * as InviteActions from 'src/app/invite/store/actions';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +18,6 @@ export class HeaderComponent {
   // Store invite
   constructor (private store:Store) {}
   invite(){
-    this.store.dispatch(HomeActions.showInvite());
+    this.store.dispatch(InviteActions.showInvite());
   }
 }

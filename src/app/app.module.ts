@@ -4,6 +4,7 @@ import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { AboutModule } from './about/about.module';
 import { ContactModule } from './contact/contact.module';
+import { InviteModule } from './invite/invite.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,7 +16,7 @@ import { PinterestIconComponent } from './footer/pinterest-icon/pinterest-icon.c
 import { InstagramIconComponent } from './footer/instagram-icon/instagram-icon.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
-import { InviteComponent } from './invite/invite.component';
+
 
 
 
@@ -30,7 +31,6 @@ import { InviteComponent } from './invite/invite.component';
     TwitterIconComponent,
     PinterestIconComponent,
     InstagramIconComponent,
-    InviteComponent,
   ],
   imports: [
     StoreModule.forRoot({}),
@@ -40,6 +40,7 @@ import { InviteComponent } from './invite/invite.component';
     SharedModule,
     ContactModule,
     AppRoutingModule,
+    InviteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

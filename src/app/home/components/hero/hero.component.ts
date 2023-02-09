@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as HomeActions from '../../store/actions';
+import * as InviteActions from 'src/app/invite/store/actions';
 
 @Component({
   selector: 'app-hero',
@@ -10,6 +10,6 @@ import * as HomeActions from '../../store/actions';
 export class HeroComponent {
   constructor (private store:Store) {}
   invite(){
-    this.store.dispatch(HomeActions.showInvite());
+    this.store.dispatch(InviteActions.showInvite());
   }
 }

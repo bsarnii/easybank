@@ -1,13 +1,3 @@
-<div class="invite" (click)="hideInvite()" *ngIf="invite$ | async">
-    <form (click)="$event.stopPropagation()" class="inner-container">
-        <img (click)="hideInvite()" src="assets/images/icon-close.svg" alt="close"/>
-        <div class="email-container">
-            <label for="email">Enter your e-mail address:</label>
-            <input type="email" id="email">
-        </div>
-        <app-button>Request Invite</app-button>
-    </form>
-</div>
 <app-hero></app-hero>
 <app-why-choose-cards></app-why-choose-cards>
 <app-articles></app-articles>
