@@ -4,10 +4,13 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
 
 
-import { HomeHomeComponent } from './home-home/home-home.component';
-import { HeroComponent } from './hero/hero.component';
-import { WhyChooseCardsComponent } from './why-choose-cards/why-choose-cards.component';
-import { ArticlesComponent } from './articles/articles.component';
+import { HomeHomeComponent } from './components/home-home/home-home.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { WhyChooseCardsComponent } from './components/why-choose-cards/why-choose-cards.component';
+import { ArticlesComponent } from './components/articles/articles.component';
+
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './store/reducers';
 
 
 
@@ -15,6 +18,7 @@ import { ArticlesComponent } from './articles/articles.component';
   declarations: [HomeHomeComponent, HeroComponent, WhyChooseCardsComponent, ArticlesComponent],
   imports: [
     CommonModule,
+    StoreModule.forFeature('home',reducers),
     SharedModule,
     HomeRoutingModule
   ],

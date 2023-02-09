@@ -14,6 +14,8 @@ import { TwitterIconComponent } from './footer/twitter-icon/twitter-icon.compone
 import { PinterestIconComponent } from './footer/pinterest-icon/pinterest-icon.component';
 import { InstagramIconComponent } from './footer/instagram-icon/instagram-icon.component';
 import { AppRoutingModule } from './app-routing.module';
+import { StoreModule } from '@ngrx/store';
+import { InviteComponent } from './invite/invite.component';
 
 
 
@@ -28,14 +30,16 @@ import { AppRoutingModule } from './app-routing.module';
     TwitterIconComponent,
     PinterestIconComponent,
     InstagramIconComponent,
+    InviteComponent,
   ],
   imports: [
+    StoreModule.forRoot({}),
     BrowserModule,
     AboutModule,
     HomeModule,
     SharedModule,
+    ContactModule,
     AppRoutingModule,
-    ContactModule
   ],
   providers: [],
   bootstrap: [AppComponent]

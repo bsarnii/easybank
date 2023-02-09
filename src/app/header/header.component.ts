@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import * as HomeActions from '../home/store/actions';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +13,11 @@ export class HeaderComponent {
    isOpen(){
     this.open = !this.open;
     this.hamburgerOrClose = this.open === false ? "assets/images/icon-hamburger.svg" : "assets/images/icon-close.svg";
+  }
+
+  // Store invite
+  constructor (private store:Store) {}
+  invite(){
+    this.store.dispatch(HomeActions.showInvite());
   }
 }

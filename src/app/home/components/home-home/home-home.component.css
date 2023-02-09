@@ -1,0 +1,44 @@
+.invite{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, var(--darkBlue), rgba(255,255,255,0));
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-container{
+    background-color: var(--lightGrayBlue);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem 1rem 1rem;
+    position: relative;
+}
+img{
+    position:absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+label{
+    color: var(--darkBlue);
+    font-size: 18px;
+    margin-bottom: .5rem;
+}
+input{
+    border: 1px solid var(--grayBlue);
+    border-radius: 10px;
+    outline-color: hsla(136, 65%, 51%, 0.5);
+    color: var(--darkBlue);
+    padding: .5rem 1rem;
+    width: 100%;
+}

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as HomeActions from '../home/store/actions';
+import * as HomeActions from '../../store/actions';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  selector: 'app-hero',
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.css']
 })
-export class FooterComponent {
+export class HeroComponent {
   constructor (private store:Store) {}
   invite(){
     this.store.dispatch(HomeActions.showInvite());
