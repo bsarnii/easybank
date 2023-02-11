@@ -1,3 +1,16 @@
+/*FORM VALIDATION*/
+.invalid{
+    color: rgb(236, 45, 45);
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(236, 45, 45);
+}
+textarea.ng-invalid.ng-touched{
+    border: 1px solid rgb(236, 45, 45);
+}
+
+/*FORM VALIDATION END*/
+
 .invite{
     position: fixed;
     top:0;
@@ -15,13 +28,15 @@
     border-radius: 10px;
     width: 80%;
     max-width: 400px;
+    padding: 2rem 1rem 1rem 1rem;
+    position: relative;
+}
+form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    padding: 2rem 1rem 1rem 1rem;
-    position: relative;
 }
 img{
     position:absolute;
@@ -41,4 +56,9 @@ input{
     color: var(--darkBlue);
     padding: .5rem 1rem;
     width: 100%;
+}
+
+p{
+    color: var(--darkBlue);
+    padding: 2rem 1rem;
 }
