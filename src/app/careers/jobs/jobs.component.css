@@ -1,0 +1,58 @@
+:host{
+    display: block;
+    background-color: var(--lightGrayBlue);
+    padding: 1.5rem;
+}
+
+.job{
+    display: block;
+    text-decoration: none;
+    background-color: var(--white);
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: scale .3s;
+
+}
+.job:hover{
+    scale: 1.05;
+}
+
+h2{
+    font-size: 32px;
+    color: var(--darkBlue);
+}
+h3{
+    font-size: 22px;
+    color: var(--darkBlue);
+    transition: color .3s;
+}
+.job:hover h3{
+    color: var(--limeGreen);
+}
+p{
+    color: var(--grayBlue);
+}
+
+@media screen and (min-width: 575px) {
+    :host{
+        padding: 5rem;
+    }
+    h2{
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .jobs-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-evenly;
+    }
+    .job{
+        max-width: 500px;
+        margin: 0;
+    }
+
+}

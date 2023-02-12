@@ -1,0 +1,7 @@
+<h2>Join us</h2>
+<div id="jobs" class="jobs-container">
+    <a *ngFor="let i of listjobs.results" href="{{i.redirect_url}}" target="_blank" class="job">
+        <h3>{{i.title}}</h3>
+        <p>{{i.location.area[3]}}, {{i.location.area[1]}}, {{i.location.area[0]}}</p>
+    </a>
+</div>

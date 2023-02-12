@@ -1,0 +1,39 @@
+:host{
+    display: block;
+    padding: 1.5rem;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+section{
+    text-align: center;
+}
+h2{
+    font-size: 32px;
+    color: var(--darkBlue);
+}
+p{
+    color: var(--grayBlue);
+}
+a{
+    display: block;
+    padding: 1rem 0;
+}
+
+@media screen and (min-width: 575px){
+    :host{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content:space-evenly;
+        align-items: center;
+        gap: 1rem;
+    }
+    section{
+        text-align: start;
+        max-width: 500px;
+    }
+    img{
+        max-width: 500px;
+    }
+}
