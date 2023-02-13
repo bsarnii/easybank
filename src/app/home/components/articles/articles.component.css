@@ -56,6 +56,9 @@ p{
     :host{
         padding: 5rem 5rem;
     }
+    h1{
+        text-align: start;
+    }
     .articles{
         flex-direction: row;
         flex-wrap: wrap;
