@@ -1,19 +1,19 @@
 <header class="container-fluid px-4 d-flex">
     <div class="logo-container">
-        <a routerLink="/"><logo-icon></logo-icon></a>
+        <a aria-label="To the home page" routerLink="/"><logo-icon></logo-icon></a>
     </div>
     <button (click)="isOpen()" class="hamburger-container">
         <img class="hamburger" [src]="hamburgerOrClose" alt="hamburger">
     </button>
     <nav [attr.data-open]="open" (click)="isOpen()" aria-label="primary">
-        <a class="link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
-        <a class="link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About</a>
-        <a class="link" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Contact</a>
-        <a class="link" href="https://webentwickler-arnold.eu" target="_blank">Blog</a>
-        <a class="link" routerLink="/careers" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Careers</a>
+        <a class="link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-label="To the home page">Home</a>
+        <a class="link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-label="To the about page">About</a>
+        <a class="link" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-label="To the contact page">Contact</a>
+        <a class="link" href="https://webentwickler-arnold.eu" target="_blank" aria-label="To my portfolio website">Blog</a>
+        <a class="link" routerLink="/careers" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-label="To the careers page">Careers</a>
     </nav>
     <div class="button-wrapper">
-        <app-button (click)="invite()">Request Invite</app-button>
+        <app-button (click)="invite()" aria-label="Invite popup">Request Invite</app-button>
     </div>
 </header>
 <div *ngIf="open" (click)="isOpen()" class="dark-on-nav-open"></div>
