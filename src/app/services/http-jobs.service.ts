@@ -14,10 +14,10 @@ export class HttpJobsService {
     {
       "app_id": "5285e84f",
       "app_key": "b9866df9252fa5ee21daa43fee05810f",
-      "results_per_page": 6,
-      "title_only": "bank",
+      "results_per_page": 9,
+      "title_only": "software",
       "where": 99423,
-      "distance": 25
+      "distance": 30
     }
 
   constructor(private http: HttpClient) { }

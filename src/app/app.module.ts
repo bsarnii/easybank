@@ -21,6 +21,7 @@ import { InstagramIconComponent } from './footer/instagram-icon/instagram-icon.c
 
 import { HttpJobsService } from './services/http-jobs.service';
 import { StoreModule } from '@ngrx/store';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 
@@ -36,6 +37,7 @@ import { StoreModule } from '@ngrx/store';
     TwitterIconComponent,
     PinterestIconComponent,
     InstagramIconComponent,
+    ErrorPageComponent,
   ],
   imports: [
     StoreModule.forRoot({}),

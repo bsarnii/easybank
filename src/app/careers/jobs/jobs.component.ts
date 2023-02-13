@@ -20,6 +20,9 @@ export class JobsComponent implements OnInit {
       {location: {area:["","","",""]},title: "",redirect_url: ""},
       {location: {area:["","","",""]},title: "",redirect_url: ""},
       {location: {area:["","","",""]},title: "",redirect_url: ""},
+      {location: {area:["","","",""]},title: "",redirect_url: ""},
+      {location: {area:["","","",""]},title: "",redirect_url: ""},
+      {location: {area:["","","",""]},title: "",redirect_url: ""},
     ]
   };
 
@@ -30,7 +33,6 @@ export class JobsComponent implements OnInit {
   private fetchJobs(){
     this.HttpJobsService.getJobs().subscribe(data => {
       this.listjobs = data;
-      console.log(this.listjobs.results[4]);
     })
   }
 }

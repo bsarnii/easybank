@@ -1,7 +1,16 @@
 <h2>Join us</h2>
 <div id="jobs" class="jobs-container">
-    <a *ngFor="let i of listjobs.results" href="{{i.redirect_url}}" target="_blank" class="job">
-        <h3>{{i.title}}</h3>
-        <p>{{i.location.area[3]}}, {{i.location.area[1]}}, {{i.location.area[0]}}</p>
-    </a>
+    <ng-container *ngIf="listjobs.count">
+        <a *ngFor="let i of listjobs.results" href="{{i.redirect_url}}" target="_blank" class="job">
+            <h3>{{i.title}}</h3>
+            <p>{{i.location.area[3] || i.location.area[2]}}, {{i.location.area[1]}}, {{i.location.area[0]}}</p>
+        </a>
+    </ng-container>
+    <ng-container *ngIf="!listjobs.count">
+        <div *ngFor="let i of [0,1,2,3,4,5,6,7,8]" class="skeleton-body">
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+        </div>
+    </ng-container>
 </div>
