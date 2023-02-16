@@ -6,7 +6,8 @@ const routes: Routes = [{path: '**', component:ErrorPageComponent}]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{
-    anchorScrolling: 'enabled'
+    anchorScrolling: 'enabled',
+    scrollPositionRestoration: "enabled"
   })],
   exports: [RouterModule]
 })

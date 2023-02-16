@@ -8,6 +8,7 @@ import { ContactModule } from './contact/contact.module';
 import { InviteModule } from './invite/invite.module';
 import { CareersModule } from './careers/careers.module';
 import { AppRoutingModule } from './app-routing.module';
+import { BlogModule } from './blog/blog.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +23,7 @@ import { InstagramIconComponent } from './footer/instagram-icon/instagram-icon.c
 import { HttpJobsService } from './services/http-jobs.service';
 import { StoreModule } from '@ngrx/store';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { BlogPostsService } from './services/blog-posts.service';
 
 
 
@@ -47,11 +49,12 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     HomeModule,
     SharedModule,
     ContactModule,
+    BlogModule,
     CareersModule,
+    InviteModule,
     AppRoutingModule,
-    InviteModule
   ],
-  providers: [HttpJobsService],
+  providers: [HttpJobsService, BlogPostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
