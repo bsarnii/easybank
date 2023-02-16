@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Job } from '../types/http-job.interface';
 import { Observable } from "rxjs";
-import { environment } from 'src/environment.ts'
+import { environment } from 'src/environment'
 
 @Injectable({
   providedIn: 'root'
