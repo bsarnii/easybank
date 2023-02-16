@@ -12,7 +12,7 @@ export class HttpJobsService {
   private params = 
     {
       "app_id": "5285e84f",
-      "app_key": process.env.JOBS_API_KEY,
+      "app_key": process.env['JOBS_API_KEY'],
       "results_per_page": 9,
       "title_only": "software",
       "where": 99423,
