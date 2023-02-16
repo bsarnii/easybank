@@ -2,7 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Job } from '../types/http-job.interface';
 import { Observable } from "rxjs";
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +12,7 @@ export class HttpJobsService {
   private params = 
     {
       "app_id": "5285e84f",
-      "app_key": environment.jobsApiKey,
+      "app_key": process.env.jobsApiKey,
       "results_per_page": 9,
       "title_only": "software",
       "where": 99423,
