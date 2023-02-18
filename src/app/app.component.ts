@@ -15,4 +15,8 @@ export class AppComponent {
   constructor(private store: Store<AppStateInterface>) {
     this.invite$ = this.store.pipe(select(showInviteSelector))
   }
+
+  ngOnInit(){
+    console.log(process.env.NG_APP_ENV)
+  }
 }
