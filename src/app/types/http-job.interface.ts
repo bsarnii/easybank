@@ -1,10 +1,10 @@
 export interface Job{
     count: number,
     __CLASS__: string,
-    results: Array<resultsInterface>
+    results: Array<JobResult>
 }
 
-interface resultsInterface {
+export interface JobResult {
     location: {
         area: String[]
     },

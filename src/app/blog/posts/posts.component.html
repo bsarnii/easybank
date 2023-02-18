@@ -1,5 +1,5 @@
-<ng-container *ngIf="listPosts">
-    <article *ngFor="let post of listPosts" class="post">
+<ng-container *ngIf="posts">
+    <article *ngFor="let post of posts; index as i" class="post" id="post{{i+1}}">
         <h2>{{post.title}}</h2>
         <small>{{post.author}}</small>
         <p style="white-space: pre-wrap;" class="content">
@@ -11,6 +11,7 @@
     </article>
 </ng-container>
 
-<div *ngIf="!listPosts" class="loading">
+<div *ngIf="!posts" class="loading">
     <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 </div>
+

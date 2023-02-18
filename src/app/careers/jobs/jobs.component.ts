@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Job } from "src/app/types/http-job.interface";
+import { Job, JobResult } from "src/app/types/http-job.interface";
 import { HttpJobsService } from 'src/app/services/http-jobs.service';
 
 @Component({
@@ -10,29 +10,14 @@ import { HttpJobsService } from 'src/app/services/http-jobs.service';
 export class JobsComponent implements OnInit {
   constructor(private HttpJobsService: HttpJobsService){}
 
-  listjobs: Job = {
-    count: 0,
-    __CLASS__: "",
-    results: [
-      {location: {area:["","","",""]},title: "",redirect_url: ""},
-      {location: {area:["","","",""]},title: "",redirect_url: ""},
-      {location: {area:["","","",""]},title: "",redirect_url: ""},
-      {location: {area:["","","",""]},title: "",redirect_url: ""},
-      {location: {area:["","","",""]},title: "",redirect_url: ""},
-      {location: {area:["","","",""]},title: "",redirect_url: ""},
-      {location: {area:["","","",""]},title: "",redirect_url: ""},
-      {location: {area:["","","",""]},title: "",redirect_url: ""},
-      {location: {area:["","","",""]},title: "",redirect_url: ""},
-    ]
-  };
-
+  listjobs!: Array<JobResult>
   ngOnInit(){
     this.fetchJobs();
   }
 
   private fetchJobs(){
     this.HttpJobsService.getJobs().subscribe(data => {
-      this.listjobs = data;
+      this.listjobs = data.results;
     })
   }
 }
