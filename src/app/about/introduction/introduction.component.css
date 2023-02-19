@@ -1,4 +1,4 @@
-main{
+section{
     padding: 1.5rem;
     text-align: center;
 }
@@ -57,7 +57,7 @@ img{
 }
 
 @media screen and (min-width:575px) {
-    main{
+    section{
         display: flex;
         align-items: center;
     }

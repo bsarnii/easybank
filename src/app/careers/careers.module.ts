@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CareersHomeComponent } from './careers-home/careers-home.component';
 import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { InternshipComponent } from './internship/internship.component';
 
 
 
@@ -13,7 +14,8 @@ import { JobsComponent } from './jobs/jobs.component';
   declarations: [
     CareersHomeComponent,
     WorkWithUsComponent,
-    JobsComponent
+    JobsComponent,
+    InternshipComponent
   ],
   imports: [
     CommonModule,
