@@ -16,7 +16,4 @@ export class AppComponent {
     this.invite$ = this.store.pipe(select(showInviteSelector))
   }
 
-  ngOnInit(){
-    console.log(process.env.NG_APP_ENV)
-  }
 }

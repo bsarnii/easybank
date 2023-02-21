@@ -1,4 +1,4 @@
 <app-header></app-header>
+<app-invite *ngIf="invite$ | async"></app-invite>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
-<app-invite *ngIf="invite$ | async"></app-invite>

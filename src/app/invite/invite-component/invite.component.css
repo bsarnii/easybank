@@ -38,11 +38,11 @@ form{
     justify-content: center;
     gap: 1.5rem;
 }
-img{
+button{
     position:absolute;
     top: 15px;
     right: 15px;
-    cursor: pointer;
+    border: none;
 }
 label{
     color: var(--darkBlue);

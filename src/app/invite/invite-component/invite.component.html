@@ -1,15 +1,15 @@
 <div class="invite" (click)="hideInvite()">
-    <div class="inner-container">
+    <div (click)="$event.stopPropagation()" class="inner-container">
+        <button (click)="hideInvite()"><img src="assets/images/icon-close.svg" alt="close"/></button>
         <form (ngSubmit)="save()" [formGroup]="inviteForm" (click)="$event.stopPropagation()">
-            <img (click)="hideInvite()" src="assets/images/icon-close.svg" alt="close"/>
             <div *ngIf="!isValid" class="email-container">
                 <label for="email">Enter your e-mail address:</label>
-                <input formControlName="email" type="email" id="email">
+                <input #myInput formControlName="email" type="email" id="email">
                 <div class="invalid" style="margin:.5rem" *ngIf="email.invalid && email.touched">
                     Invalid e-mail
                 </div>
             </div>
-            <app-button *ngIf="!isValid">Request Invite</app-button>
+            <app-button buttonType="submit" *ngIf="!isValid">Request Invite</app-button>
         </form>
         <div *ngIf="isValid" class="correctSubmit">
             <p >Thank you for your interest. We will be in touch with you soon.</p>

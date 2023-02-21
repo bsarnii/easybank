@@ -28,7 +28,7 @@ section{
     opacity: .75;
     z-index: -1;
 }
-.paragraph-container > p{
+.paragraph-container > q{
     font-size: 18px;
 }
 
@@ -47,6 +47,7 @@ section{
     color: var(--darkBlue);
     padding: .5rem 0 0 0;
     margin: 0;
+    display: block;
 }
 small{
     color: var(--darkBlue);
