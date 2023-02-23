@@ -24,6 +24,9 @@ import { HttpJobsService } from './services/http-jobs.service';
 import { StoreModule } from '@ngrx/store';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { BlogPostsService } from './services/blog-posts.service';
+import { EffectsModule } from '@ngrx/effects';
+import { jobsReducer } from './Store/Reducers/jobs.reducers';
+import { JobsEffect } from './Store/Effects/jobs.effect';
 
 
 
@@ -42,7 +45,7 @@ import { BlogPostsService } from './services/blog-posts.service';
     ErrorPageComponent,
   ],
   imports: [
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({jobs: jobsReducer}),
     BrowserModule,
     HttpClientModule,
     AboutModule,
@@ -53,6 +56,7 @@ import { BlogPostsService } from './services/blog-posts.service';
     CareersModule,
     InviteModule,
     AppRoutingModule,
+    EffectsModule.forRoot([JobsEffect]),
   ],
   providers: [HttpJobsService, BlogPostsService],
   bootstrap: [AppComponent]

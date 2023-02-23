@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Job, JobResult } from "src/app/types/http-job.interface";
-import { HttpJobsService } from 'src/app/services/http-jobs.service';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { JobResult } from "src/app/types/http-job.interface";
+import { getJobsResults } from 'src/app/Store/Selectors/jobs.selector';
+import { loadJobs } from 'src/app/Store/Actions/jobs.actions';
 
 @Component({
   selector: 'app-jobs',
@@ -8,16 +11,16 @@ import { HttpJobsService } from 'src/app/services/http-jobs.service';
   styleUrls: ['./jobs.component.css']
 })
 export class JobsComponent implements OnInit {
-  constructor(private HttpJobsService: HttpJobsService){}
+  constructor( private store:Store){}
 
-  listjobs!: Array<JobResult>
+  jobs$!: Observable<JobResult[] | undefined>
+
   ngOnInit(){
     this.fetchJobs();
   }
 
   private fetchJobs(){
-    this.HttpJobsService.getJobs().subscribe(data => {
-      this.listjobs = data.results;
-    })
+    this.store.dispatch(loadJobs());
+    this.jobs$ = this.store.pipe(select(getJobsResults))
   }
 }
