@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store"
-import { InviteStateInterface } from "../../Types/invite-state.interface"
+import { InviteStateInterface } from "../../types/invite-state.interface"
 import * as InviteActions from "../Actions/invite.actions";
 
 export const initialState: InviteStateInterface = {

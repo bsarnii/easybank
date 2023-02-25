@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Post } from 'src/app/Types/http-posts.interface';
+import { Post } from 'src/app/types/http-posts.interface';
 
 @Component({
   selector: 'app-navigation',

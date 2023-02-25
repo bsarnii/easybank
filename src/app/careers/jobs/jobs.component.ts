@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { JobResult } from "src/app/Types/http-job.interface";
+import { JobResult } from "src/app/types/http-job.interface";
 import { getJobsResults } from 'src/app/Store/Selectors/jobs.selector';
 import { loadJobs } from 'src/app/Store/Actions/jobs.actions';
 

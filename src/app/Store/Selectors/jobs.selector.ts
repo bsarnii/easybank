@@ -1,5 +1,5 @@
 import { createSelector, createFeatureSelector } from "@ngrx/store";
-import { Job } from "src/app/Types/http-job.interface";
+import { Job } from "src/app/types/http-job.interface";
 import { JobsState } from "../Reducers/jobs.reducers";
 
 export const getJobsState = createFeatureSelector<JobsState>("jobs");
