@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import * as InviteActions from '../store/actions';
+import * as InviteActions from '../../Store/Actions/invite.actions';
 
 @Component({
   selector: 'app-invite',

@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store"
-import { Job } from "../../types/http-job.interface"
+import { Job } from "../../Types/http-job.interface"
 import { loadJobsSuccess } from "../Actions/jobs.actions";
 
 export interface JobsState{

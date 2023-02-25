@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { showInviteSelector } from './invite/store/selectors';
-import { AppStateInterface } from './types/appstate.interface';
+import { showInviteSelector } from './Store/Selectors/invite.selectors';
+import { AppStateInterface } from './Types/appstate.interface';
 
 @Component({
   selector: 'app-root',

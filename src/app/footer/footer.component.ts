@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as InviteActions from 'src/app/invite/store/actions';
+import * as InviteActions from 'src/app/Store/Actions/invite.actions';
 
 @Component({
   selector: 'app-footer',

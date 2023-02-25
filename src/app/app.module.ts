@@ -27,6 +27,7 @@ import { BlogPostsService } from './services/blog-posts.service';
 import { EffectsModule } from '@ngrx/effects';
 import { jobsReducer } from './Store/Reducers/jobs.reducers';
 import { JobsEffect } from './Store/Effects/jobs.effect';
+import { inviteReducers } from './Store/Reducers/invite.reducers';
 
 
 
@@ -45,7 +46,7 @@ import { JobsEffect } from './Store/Effects/jobs.effect';
     ErrorPageComponent,
   ],
   imports: [
-    StoreModule.forRoot({jobs: jobsReducer}),
+    StoreModule.forRoot({jobs: jobsReducer, invite: inviteReducers}),
     BrowserModule,
     HttpClientModule,
     AboutModule,

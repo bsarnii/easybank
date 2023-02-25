@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogPostsService } from 'src/app/services/blog-posts.service';
-import { Post } from 'src/app/types/http-posts.interface';
+import { Post } from 'src/app/Types/http-posts.interface';
 
 @Component({
   selector: 'app-blog-home',

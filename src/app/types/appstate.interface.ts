@@ -1,4 +1,4 @@
-import { InviteStateInterface } from "../invite/types/invite-state.interface";
+import { InviteStateInterface } from "./invite-state.interface";
 import { Job } from "./http-job.interface";
 
 export interface AppStateInterface {
