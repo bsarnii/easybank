@@ -1,6 +1,7 @@
 /*FORM VALIDATION*/
 .invalid{
     color: rgb(236, 45, 45);
+    position: absolute;
 }
 input.ng-invalid.ng-touched{
     border: 1px solid rgb(236, 45, 45);
@@ -36,7 +37,7 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 button{
     position:absolute;
