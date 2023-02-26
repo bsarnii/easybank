@@ -6,7 +6,7 @@
             <p>{{i.location.area[3] || i.location.area[2]}}, {{i.location.area[1]}}, {{i.location.area[0]}}</p>
         </a>
     </ng-container>
-    <ng-container *ngIf="!jobs$">
+    <ng-container  *ngIf="!(jobs$ | async)">
         <div *ngFor="let i of [0,1,2,3,4,5,6,7,8]" class="skeleton-body">
             <div class="skeleton skeleton-text"></div>
             <div class="skeleton skeleton-text"></div>

@@ -13,7 +13,8 @@ import { loadJobs } from 'src/app/Store/Actions/jobs.actions';
 export class JobsComponent implements OnInit {
   constructor( private store:Store){}
 
-  jobs$!: Observable<JobResult[] | undefined>
+  loading = true;
+  jobs$!: Observable<JobResult[] | undefined>;
 
   ngOnInit(){
     this.fetchJobs();
@@ -21,6 +22,6 @@ export class JobsComponent implements OnInit {
 
   private fetchJobs(){
     this.store.dispatch(loadJobs());
-    this.jobs$ = this.store.pipe(select(getJobsResults))
+    this.jobs$ = this.store.pipe(select(getJobsResults));
   }
 }

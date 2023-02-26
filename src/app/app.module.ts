@@ -28,6 +28,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { jobsReducer } from './Store/Reducers/jobs.reducers';
 import { JobsEffect } from './Store/Effects/jobs.effect';
 import { inviteReducers } from './Store/Reducers/invite.reducers';
+import { postsReducer } from './Store/Reducers/posts.reducers';
+import { PostsEffect } from './Store/Effects/posts.effects';
 
 
 
@@ -46,7 +48,11 @@ import { inviteReducers } from './Store/Reducers/invite.reducers';
     ErrorPageComponent,
   ],
   imports: [
-    StoreModule.forRoot({jobs: jobsReducer, invite: inviteReducers}),
+    StoreModule.forRoot({
+      jobs: jobsReducer,
+      invite: inviteReducers,
+      posts: postsReducer
+    }),
     BrowserModule,
     HttpClientModule,
     AboutModule,
@@ -57,7 +63,7 @@ import { inviteReducers } from './Store/Reducers/invite.reducers';
     CareersModule,
     InviteModule,
     AppRoutingModule,
-    EffectsModule.forRoot([JobsEffect]),
+    EffectsModule.forRoot([JobsEffect, PostsEffect]),
   ],
   providers: [HttpJobsService, BlogPostsService],
   bootstrap: [AppComponent]

@@ -1,5 +1,4 @@
 export interface Posts {
-    data: Post
     response:{
         data: Array<Post>
     }

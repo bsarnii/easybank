@@ -1,6 +1,6 @@
 <div class="navigation-container">
     <h2>Jump to:</h2>
-    <nav aria-label="Navigation for blog articles">
-        <a *ngFor="let post of posts; index as i" routerLink="/blog" fragment="post{{i+1}}">{{post.title}}</a>
+    <nav *ngIf="posts$ | async" aria-label="Navigation for blog articles">
+        <a *ngFor="let post of posts$ | async; index as i" routerLink="/blog" fragment="post{{i+1}}">{{post.title}}</a>
     </nav>
 </div>

@@ -1,10 +1,10 @@
 <app-heading-divider title="Blog"></app-heading-divider>
 
-<ng-container *ngIf="listPosts">
-    <app-navigation [posts]="listPosts"></app-navigation>
-    <app-posts [posts]="listPosts"></app-posts>
+<ng-container *ngIf="posts$ | async">
+    <app-navigation></app-navigation>
+    <app-posts></app-posts>
 </ng-container>
 
-<div *ngIf="!listPosts" class="loading">
+<div *ngIf="!(posts$ | async)" class="loading">
     <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 </div>

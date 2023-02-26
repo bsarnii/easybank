@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogPostsService } from 'src/app/services/blog-posts.service';
-import { Post } from 'src/app/types/http-posts.interface';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { Post } from "src/app/types/http-posts.interface";
+import { getPostsResponse } from 'src/app/Store/Selectors/posts.selectors';
+import { loadPosts } from 'src/app/Store/Actions/posts.actions';
 
 @Component({
   selector: 'app-blog-home',
@@ -9,17 +12,16 @@ import { Post } from 'src/app/types/http-posts.interface';
 })
 export class BlogHomeComponent implements OnInit {
 
-  constructor(private BlogPostsService:BlogPostsService){}
-  listPosts!: Array<Post>;
+  constructor( private store:Store){}
   
+  posts$!: Observable<Post[] | undefined>
+
 
   ngOnInit(){
-    this.fetchPosts()
+    this.store.dispatch(loadPosts())
+    this.posts$ = this.store.pipe(select(getPostsResponse))
   }
-
-  private fetchPosts(){
-    this.BlogPostsService.getPosts().subscribe(data => {
-      this.listPosts = data.response.data
-    })
-  }
+    
 }
+
+

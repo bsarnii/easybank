@@ -1,4 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { getPostsResponse } from 'src/app/Store/Selectors/posts.selectors';
 import { Post } from 'src/app/types/http-posts.interface';
 
 @Component({
@@ -7,5 +10,11 @@ import { Post } from 'src/app/types/http-posts.interface';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent {
-  @Input() posts!: Array<Post>;
+  constructor( private store:Store){}
+  
+  posts$!: Observable<Post[] | undefined>
+
+  ngOnInit(){
+    this.posts$ = this.store.pipe(select(getPostsResponse))
+  }
 }
